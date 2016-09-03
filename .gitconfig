@@ -1,0 +1,61 @@
+[user]
+    name = Mariano Gappa
+    email = mariano@movio.co
+
+[credential]
+        helper = cache
+
+[alias]
+    pr = pull --rebase -p
+    s = status
+    c = commit
+    dc = diff -w --cached
+    d = diff -w
+    a = add
+    rh = reset --hard
+    unstage = reset HEAD --
+    co = checkout
+    br = branch
+    l = log --graph --pretty=format:'%C(yellow)%h%Cred%d %C(cyan)%an %Creset%s %Cgreen(%cr)'
+    unpushed = log --oneline --graph --decorate @{u}..
+
+;    p = pull --rebase -p
+;    st = status
+;    w = diff -w --word-diff=color
+;    f = fetch -p
+;    m = merge --no-ff
+;    ff = merge --ff-only
+;    last = log -1 HEAD
+;    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+;    hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+;    wtf = log -n 10 --author=Mariano
+
+[push]
+    default = simple
+
+[core]
+    autocrlf = input
+    editor = vim
+    excludesfile = /Users/marianol/.gitignore_global
+
+[color]
+    ui = true
+
+[filter "media"]
+    clean = git-media-clean %f
+    smudge = git-media-smudge %f
+
+[filter "hawser"]
+    clean = git hawser clean %f
+    smudge = git hawser smudge %f
+    required = true
+
+[merge]
+    tool = vimdiff
+    defaultToUpstream = true
+
+[diff]
+    algorithm = patience
+
+[url "git@github.com:"]
+    pushInsteadOf = https://github.com/
