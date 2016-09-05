@@ -13,6 +13,7 @@ fi
     set -vx
     ln -sf "$DOTFILES/.bashrc" $HOME/.bashrc
     ln -sf "$DOTFILES/.bash_profile" $HOME/.bash_profile
+    ln -sf "$DOTFILES/.bash_aliases" $HOME/.bash_aliases
     ln -sf "$DOTFILES/.gitconfig" $HOME/.gitconfig
     ln -sf "$DOTFILES/.gitignore_global" $HOME/.gitignore_global
 )

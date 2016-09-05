@@ -7,7 +7,7 @@
 export HISTFILESIZE=
 export HISTSIZE=
 
-export PATH="/usr/local/bin:/usr/local/sbin:~/Code/go/bin"
+export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbin:~/Code/go/bin"
 export WORKSPACE="$HOME/Code"
 export DOTFILES="$WORKSPACE/dotfiles"
 export GOPATH="$HOME/Code/go"
