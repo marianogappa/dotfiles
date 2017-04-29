@@ -12,6 +12,13 @@ export WORKSPACE="$HOME/Code"
 export DOTFILES="$WORKSPACE/dotfiles"
 export GOPATH="$HOME/Code/go"
 
+# Syntax highlighting in less
+export LESSOPEN="| src-hilite-lesspipe.sh %s"
+export LESS=" -R "
+
+# Use brew's PHP
+export PATH="$(brew --prefix php56)/bin:$PATH"
+
 # http://unix.stackexchange.com/questions/4859/visual-vs-editor-whats-the-difference
 export VISUAL=vim
 
