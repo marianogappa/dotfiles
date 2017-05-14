@@ -3,7 +3,7 @@
     email = mariano@movio.co
 
 [credential]
-        helper = cache
+	helper = osxkeychain
 
 [alias]
     pr = pull --rebase -p
