@@ -3,6 +3,7 @@ alias watch='watch '
 alias server="python -m SimpleHTTPServer"
 alias tree="tree -I 'target|node_modules'"
 alias killmergedbranches='git branch --merged | grep -v "\*" | grep -v "master" | xargs -n 1 git branch -d'
+alias ctags="$(brew --prefix)/bin/ctags"
 
 # open ports the host is currently listening to
 alias ports="lsof -P | grep LISTEN"
