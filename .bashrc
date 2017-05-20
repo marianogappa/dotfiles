@@ -79,3 +79,16 @@ source ~/Code/jira-cli/jira.sh
 
 # https://github.com/rupa/z
 source ~/Code/z/z.sh
+
+# https://gist.github.com/noraesae/d8dbbb6a28cd49987a72
+function movtogif {
+    if [ -z "$3" ]; then
+        scale=800
+    else
+        scale=$3
+    fi
+
+    ffmpeg -i "$1" -vf scale=$scale:-1 -r 10 -f image2pipe -vcodec ppm - |\
+        convert -delay 5 -layers Optimize -loop 0 - "$2"
+}
+
