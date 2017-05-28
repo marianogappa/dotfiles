@@ -92,3 +92,8 @@ function movtogif {
         convert -delay 5 -layers Optimize -loop 0 - "$2"
 }
 
+
+function title {
+    echo -ne "\033]0;"$*"\007"
+}
+
