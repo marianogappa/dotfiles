@@ -97,3 +97,7 @@ function title {
     echo -ne "\033]0;"$*"\007"
 }
 
+function yamlok {
+    ruby -e "require 'yaml';puts YAML.load_file('$1')" 1>/dev/null 2>&1
+}
+
