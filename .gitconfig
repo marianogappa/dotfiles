@@ -19,6 +19,10 @@
     l = log --graph --pretty=format:'%C(yellow)%h%Cred%d %C(cyan)%an %Creset%s %Cgreen(%cr)'
     unpushed = log --oneline --graph --decorate @{u}..
 
+    recent = for-each-ref --count=10 --sort=-committerdate refs/heads/ --format="%(refname:short)"
+    overview = log --all --since='2 weeks' --oneline --no-merges
+    today = log --since=00:00:00 --all --no-merges --oneline --author=Mariano
+
 ;    p = pull --rebase -p
 ;    st = status
 ;    w = diff -w --word-diff=color
