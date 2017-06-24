@@ -101,3 +101,6 @@ function yamlok {
     ruby -e "require 'yaml';puts YAML.load_file('$1')" 1>/dev/null 2>&1
 }
 
+function gg {
+    git grep "$1" $(git rev-list --all | head -n1000)
+}
