@@ -97,6 +97,10 @@ function title {
     echo -ne "\033]0;"$*"\007"
 }
 
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+    . $(brew --prefix)/etc/bash_completion
+fi
+
 function yamlok {
     ruby -e "require 'yaml';puts YAML.load_file('$1')" 1>/dev/null 2>&1
 }
