@@ -7,11 +7,13 @@
 export HISTFILESIZE=
 export HISTSIZE=
 
-export PATH="/usr/local/Cellar/gnu-sed/4.5/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/marianol/Code/go/bin:/Users/marianol/Library/Python/2.7/bin"
+export GEM_HOME="$HOME/.gem"
+export RUBY_HOME=/usr/local/opt/ruby/bin
+export PATH="/usr/local/Cellar/gnu-sed/4.5/bin:$RUBY_HOME:$GEM_HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/marianol/Code/go/bin:/Users/marianol/Library/Python/2.7/bin:/Users/marianol/Library/Python/3.7/bin"
 export WORKSPACE="$HOME/Code"
 export DOTFILES="$WORKSPACE/dotfiles"
 export GOPATH="$HOME/Code/go"
-export GOROOT="/usr/local/opt/go/libexec"
+#export GOROOT="/usr/local/opt/go/libexec"
 
 # Syntax highlighting in less
 export LESSOPEN="| src-hilite-lesspipe.sh %s"
@@ -137,3 +139,8 @@ groupby2 ()
         awk '{arr[$1 "\t" $2]+=$3}END {for (key in arr) printf("%s\t%s\n", key, arr[key])}' | sort -nk1,1
 }
 
+# Env for https://github.com/marianogappa/gs
+export WG_DATA_DIR=~/Code/wgdata
+echo 'export PATH="/usr/local/opt/go@1.13/bin:$PATH"' >> ~/.bash_profile
+
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi

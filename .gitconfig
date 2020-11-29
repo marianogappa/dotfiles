@@ -1,6 +1,6 @@
 [user]
     name = Mariano Gappa
-    email = mariano@movio.co
+    email = spinetta@gmail.com
 
 [credential]
 	helper = osxkeychain
@@ -15,7 +15,7 @@
     rh = reset --hard
     unstage = reset HEAD --
     co = checkout
-    br = branch
+    br = branch --sort=-committerdate
     l = log --graph --pretty=format:'%C(yellow)%h%Cred%d %C(cyan)%an %Creset%s %Cgreen(%cr)'
     unpushed = log --oneline --graph --decorate @{u}..
 
@@ -63,3 +63,5 @@
 
 [url "git@github.com:"]
     pushInsteadOf = https://github.com/
+[branch]
+	sort = -committerdate
