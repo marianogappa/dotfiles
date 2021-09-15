@@ -141,6 +141,5 @@ groupby2 ()
 
 # Env for https://github.com/marianogappa/gs
 export WG_DATA_DIR=~/Code/wgdata
-echo 'export PATH="/usr/local/opt/go@1.13/bin:$PATH"' >> ~/.bash_profile
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
